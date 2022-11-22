@@ -1,0 +1,22 @@
+modules:
+  confluence:spacePage:
+    - key: bpmn-viewer-hello-world
+      resource: main
+      resolver:
+        function: resolver
+      title: bpmn-viewer
+      route: hello-world
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+    tunnel:
+      port: 3000
+app:
+  id: ari:cloud:ecosystem::app/8881e4e9-a0a2-41df-87fe-60e8102dbea0
+permissions:
+  content:
+    scripts:
+      - 'unsafe-inline'
