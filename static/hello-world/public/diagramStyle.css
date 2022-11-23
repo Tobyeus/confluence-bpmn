@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+}
+
+element {
+  height: 100%;
+}
+
+.diagram-container {
+    height:  600px;
+}
+
+.react-bpmn-diagram-container {
+  width: 90%;
+  height: 80vh;
+  min-height: 600px;
+  border: 2px solid black;
+}
