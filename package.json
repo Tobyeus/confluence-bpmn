@@ -12,6 +12,6 @@
     "@forge/resolver": "^1.4.6"
   },
   "scripts": {
-    "build": "cd ./static/hello-world && npm run build && cd ../../ && forge deploy"
+    "build": "cd ./static/bpmn-viewer && npm run build && cd ../../ && forge deploy"
   }
 }

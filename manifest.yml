@@ -1,17 +1,17 @@
 modules:
   confluence:spacePage:
-    - key: bpmn-viewer-hello-world
+    - key: bpmn-viewer
       resource: main
       resolver:
         function: resolver
       title: bpmn-viewer
-      route: hello-world
+      route: bpmn-viewer
   function:
     - key: resolver
       handler: index.handler
 resources:
   - key: main
-    path: static/hello-world/build
+    path: static/bpmn-viewer/build
     tunnel:
       port: 3000
 app:

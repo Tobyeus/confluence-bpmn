@@ -2,29 +2,25 @@ import React, { useEffect, useState } from 'react';
 import { invoke } from '@forge/bridge';
 import ReactBpmn from 'react-bpmn';
 
-let xmlContent;
-let showDiagram = true;
 let updateXML;
 
 function App() {
-  const [data, setData] = useState(null);
-  const [xmlContent, setXML] = useState(false);
+  const [xmlContent, setXML] = useState(null);
   // const [showDiagram, setShowDiagram] = useState(false);
 
   useEffect(() => {
-    invoke('getText', { example: 'my-invoke-variable' }).then(setData);
+    //invoke('getText', { example: 'my-invoke-variable' }).then(setData);
     updateXML = setXML;
     return () => updateXML = null;
   }, []);
 
   return (
-    <div>
-      {data ? data : 'Loading...'}
-      <h2>Hello World</h2>
-        <ReactBpmn
-          diagramXML={xmlContent}
-        />
+    <div className="bpmn-app">
+      <h2>BPMN Viewer</h2>
       <input type="file" onChange={(e) => readFile(e.target)} />
+      <ReactBpmn
+        diagramXML={xmlContent}
+      />
     </div>
   );
 }
@@ -51,6 +47,5 @@ function processXML(file) {
     reader.readAsText(file);
   })
 }
-
 
 export default App;

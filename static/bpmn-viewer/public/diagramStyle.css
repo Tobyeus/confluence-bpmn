@@ -2,8 +2,12 @@ html, body {
   height: 100%;
 }
 
-element {
-  height: 100%;
+.bpmn-app h2{
+  padding: 5px;
+}
+
+.bpmn-app input{
+  padding: 10px;
 }
 
 .diagram-container {
